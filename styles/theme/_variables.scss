@@ -1,0 +1,76 @@
+// ******** THEME VARIABLES ********
+
+//
+// Color system
+//
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$primary:       #60c5aa !default;
+$secondary:     #707070 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         #ffffff !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+    (
+      "primary":    $primary,
+      "secondary":  $secondary,
+      "success":    $success,
+      "info":       $info,
+      "warning":    $warning,
+      "danger":     $danger,
+      "light":      $light,
+      "dark":       $dark
+    ),
+    $theme-colors
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white !default;
+$body-color:                #999999 !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif:      Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$headings-color:              #707070 !default;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+// $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+// $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-font-size-lg:            0.9rem !default;
+$btn-line-height-lg:          2.25rem !default;

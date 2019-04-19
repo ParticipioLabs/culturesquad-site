@@ -1,0 +1,21 @@
+// Load fonts.
+// @import "styles/fonts/cerebrisans/cerebrisans.css"; // .css imports load from the root and don't need any prefix.
+// @import "styles/fonts/open_sans";
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap-core';
+
+// Bootstrap-vue
+@import 'bootstrap-vue';
+
+// Theme
+@import 'theme/prototype';
+
+// Load dependencies.
+// @import 'v-calendar/lib/v-calendar.min.css'; // .css imports don't need the `~` prefix.
+
+// Custom styling.
+@import "custom-styles";

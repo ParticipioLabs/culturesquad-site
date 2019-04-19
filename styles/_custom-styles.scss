@@ -1,0 +1,41 @@
+// NOTE: This file is loaded independently from the webpack config that loads SCSS resources to each file,
+// because of that needed resources must be imported manually.
+@import 'helpers';
+
+html {
+  overflow-x: hidden !important;
+}
+
+body, html {
+  height: 100%;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+div.meta {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Default fade transition animation.
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+// Page fade transition animation.
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s
+}
+.page-enter, .page-leave-active {
+  opacity: 0
+}

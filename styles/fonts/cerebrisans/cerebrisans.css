@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Cerebri Sans';
+    src: url('fonts/cerebrisans-regular.eot');
+    src: url('fonts/cerebrisans-regular.eot?#iefix') format('embedded-opentype'), url('fonts/cerebrisans-regular.woff') format('woff'), url('fonts/cerebrisans-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@font-face {
+  font-family: 'Cerebri Sans';
+  src: url('fonts/cerebrisans-medium.eot');
+  src: url('fonts/cerebrisans-medium.eot?#iefix') format('embedded-opentype'), url('fonts/cerebrisans-medium.woff') format('woff'), url('fonts/cerebrisans-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cerebri Sans';
+  src: url('fonts/cerebrisans-semibold.eot');
+  src: url('fonts/cerebrisans-semibold.eot?#iefix') format('embedded-opentype'), url('fonts/cerebrisans-semibold.woff') format('woff'), url('fonts/cerebrisans-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
