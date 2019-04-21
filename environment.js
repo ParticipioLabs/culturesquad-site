@@ -20,11 +20,11 @@ const config = {
   },
   staging: {
     ...defaultConfig,
-    cacheMiddlewareBaseEndpoint: 'https://cs-api-dev.mop.ba'
+    cacheMiddlewareBaseEndpoint: 'https://api.particip.io'
   },
   production: {
     ...defaultConfig,
-    cacheMiddlewareBaseEndpoint: 'https://cs-api-dev.mop.ba'
+    cacheMiddlewareBaseEndpoint: 'https://api.particip.io'
   }
 };
 
