@@ -80,7 +80,7 @@ export default {
   },
   head: {
     title: 'Home',
-    titleTemplate: '%s | WIP'
+    titleTemplate: '%s | Culture Squad'
   },
   async asyncData(context) {
     try {

@@ -6,7 +6,7 @@
 
     <!--Event details-->
     <white-section>
-      <event-details :event="event"/>
+      <event-details :event="eventData"/>
     </white-section>
   </div>
 </template>
@@ -26,7 +26,7 @@
     },
     head: {
       title: 'Event details',
-      titleTemplate: '%s | WIP'
+      titleTemplate: '%s | Culture Squad'
     },
     async asyncData(context) {
       if(context.params.slug && context.params.id){
@@ -34,16 +34,18 @@
           const eventDetailsDiscourseEndpoint = `https://edgeryders.eu/t/${context.params.slug}/${context.params.id}`;
           const eventDetails = await context.$axios.get(`${process.env.cacheMiddlewareBaseEndpoint}/get-data?endpoint=${eventDetailsDiscourseEndpoint}`);
           const eventTitle = eventDetails.data.title;
-          const event = eventDetails.data.post_stream.posts[0];
+          const eventData = eventDetails.data.post_stream.posts[0];
 
           return {
             eventTitle,
-            event
+            eventData
           }
         }
         catch (err) {
           context.error(parseError(err));
         }
+      } else {
+        context.error({statusCode: 404, message: 'Not Found!'})
       }
     }
   }
