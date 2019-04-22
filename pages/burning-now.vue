@@ -2,7 +2,7 @@
   <div>
     <hero>
       <h2>{{ pageHeaderTitle }}</h2>
-      <p>Lorem justo in tellus aenean lacinia felis.</p>
+      <p>the squad in action nowadays</p>
     </hero>
 
     <!--Meetup dates homepage section-->

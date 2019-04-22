@@ -2,24 +2,13 @@
   <footer class="footer container-fluid">
     <div class="container">
       <div class="row mb-4">
-        <div class="col-sm-12 col-md-6 mb-3 mb-md-0">
-          <b-nav>
-            <b-nav-item to="/#">FAQ</b-nav-item>
-            <b-nav-item to="/#">Support</b-nav-item>
-            <b-nav-item to="/#">Terms</b-nav-item>
-            <b-nav-item to="/#">Contact</b-nav-item>
-          </b-nav>
-        </div>
-        <div class="col-sm-12 col-md-6 text-md-right">
+        <div class="col-sm-12 col-md-12 text-md-right">
           <social-icons-bar />
         </div>
       </div>
       <div class="row d-flex align-items-center">
-        <div class="col-md-6 col-sm-12 mb-sm-3">
-          &copy; Untitled. All rights reserved. Lorem ipsum dolor.
-        </div>
-        <div class="col-md-6 col-sm-12 mb-3 mb-md-0 text-md-right">
-          12345 Somewhere Road Nashville, TN 00000(000) 000-0000
+        <div class="col-md-12 col-sm-12 mb-3 mb-md-0 text-md-right">
+          Built with support from Edgeryders. Find us in Brussels, Bedford, Berlin, Cluj, Edinburgh, Stockholm, Yerevan, and all over the world. <br>Meet us at edgeryders.eu.
         </div>
       </div>
     </div>

@@ -11,8 +11,8 @@
     <grey-section>
       <home-first-section
         :title="firstSectionTitle"
-        :description-html="firstSectionParagraphDescription"/>
-      <google-map />
+        :description-html="firstSectionParagraphDescription" />
+    <!-- google-map / -->
     </grey-section>
 
     <!--Team homepage section-->

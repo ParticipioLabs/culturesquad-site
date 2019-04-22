@@ -4,14 +4,14 @@
       <div class="col-sm-12 col-lg-8 text-left hero__text">
         <div class="hero__text__inner">
           <h1> {{ pageHeaderTitle }} </h1>
-          <p> Amet tincidunt arcu suspendisse consequat </p>
+          <p> with an add-on of technology and connectivity </p>
         </div>
       </div>
       <div class="col-sm-12 col-lg-4 hero__buttons pl-lg-5">
         <div class="hero__buttons__inner">
           <b-button
             class="w-100 mb-4"
-            variant="primary"
+            variant="outline-light"
             href="/burning-now"
             size="lg"
             type="link">
@@ -24,7 +24,7 @@
             href="/team"
             size="lg"
             type="link">
-            Team
+            Our story
           </b-button>
         </div>
       </div>
@@ -37,7 +37,7 @@
     name: "HomeHeroContent",
     data() {
       return {
-        pageHeaderTitle: 'Home'
+        pageHeaderTitle: 'Culture for social change'
       }
     }
   }

@@ -35,12 +35,12 @@
         <b-nav-item to="/team">Team</b-nav-item>
 
         <b-button
-          :href="edgerydersUrl"
+          href="https://edgeryders.eu/c/culture-squad"
           class="mt-3 mb-3"
           variant="primary"
           type="link"
           size="lg">
-          Log In
+          Join the forum
         </b-button>
       </b-navbar-nav>
     </div>

@@ -30,7 +30,7 @@
     },
     data () {
       return {
-        sectionTitle: 'Featured work',
+        sectionTitle: 'Our projects',
         edgerydersUrl: process.env.edgerydersUrl,
         removeSquareBracketsTag
       }

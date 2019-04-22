@@ -16,7 +16,8 @@ const defaultConfig = {
 
 const config = {
   dev: {
-    ...defaultConfig
+    ...defaultConfig,
+    cacheMiddlewareBaseEndpoint: 'https://api.particip.io'
   },
   staging: {
     ...defaultConfig,

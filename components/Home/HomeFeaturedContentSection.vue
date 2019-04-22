@@ -33,7 +33,7 @@
     data () {
       return {
         edgerydersUrl: process.env.edgerydersUrl,
-        sectionTitle: 'Featured content',
+        sectionTitle: 'Jump right into the conversations',
         truncate,
         formatDate
       }

@@ -1,38 +1,18 @@
 <template>
   <ul class="social-icons-bar">
     <li class="social-icons-bar__icon">
-      <a>
+      <a href="https://twitter.com/edgeryders">
         <i class="fab fa-twitter"/>
       </a>
     </li>
     <li class="social-icons-bar__icon">
-      <a>
+      <a href="https://www.facebook.com/Edgeryders/">
         <i class="fab fa-facebook"/>
       </a>
     </li>
     <li class="social-icons-bar__icon">
-      <a>
+      <a href="https://www.instagram.com/notwistgirl/">
         <i class="fab fa-instagram"/>
-      </a>
-    </li>
-    <li class="social-icons-bar__icon">
-      <a>
-        <i class="fab fa-github"/>
-      </a>
-    </li>
-    <li class="social-icons-bar__icon">
-      <a>
-        <i class="fab fa-linkedin"/>
-      </a>
-    </li>
-    <li class="social-icons-bar__icon">
-      <a>
-        <i class="fas fa-envelope"/>
-      </a>
-    </li>
-    <li class="social-icons-bar__icon">
-      <a>
-        <i class="fab fa-forumbee"/>
       </a>
     </li>
   </ul>

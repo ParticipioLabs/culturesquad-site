@@ -2,7 +2,6 @@
   <div>
     <hero>
       <h2>{{ pageHeaderTitle }}</h2>
-      <p>Lorem justo in tellus aenean lacinia felis.</p>
     </hero>
 
     <!--Text about team section-->
@@ -53,7 +52,7 @@
     },
     data() {
       return {
-        pageHeaderTitle: 'Team'
+        pageHeaderTitle: 'Our story'
       }
     },
     async asyncData(context) {

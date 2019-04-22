@@ -7,7 +7,7 @@
 
     <p
       class="mb-1 mt-3 mt-md-0"
-      v-html="truncate(post.excerpt, 100, '...')"/>
+      v-html="truncate(post.excerpt, 300, '...')"/>
   </b-list-group-item>
 </template>
 
