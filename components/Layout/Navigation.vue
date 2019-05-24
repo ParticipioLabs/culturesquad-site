@@ -152,7 +152,7 @@ export default {
 
     .erlogo {
       height: 40px;
-      margin-right: 10px;
+      margin-right: 0.1rem;
     }
 
     &__logo {
@@ -160,7 +160,8 @@ export default {
       // max-height: 40px;
       // width: auto;
       color: #707070;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
+      margin-right: 0px;
 
       &:hover {
         color: #707070;
