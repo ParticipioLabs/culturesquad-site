@@ -2,16 +2,13 @@
   <div class="container">
     <div class="row mx-auto py-3 d-flex align-items-center hero__container">
       <div class="col-sm-12 col-lg-8 text-left hero__text">
-        <div class="hero__text__inner">
-          <h1> {{ pageHeaderTitle }} </h1>
-          <p> with an add-on of technology and connectivity </p>
-        </div>
+        <div class="hero__text__inner" />
       </div>
       <div class="col-sm-12 col-lg-4 hero__buttons pl-lg-5">
         <div class="hero__buttons__inner">
           <b-button
             class="w-100 mb-4"
-            variant="outline-light"
+            variant="light"
             href="/burning-now"
             size="lg"
             type="link">
@@ -20,11 +17,11 @@
 
           <b-button
             class="w-100"
-            variant="outline-light"
-            href="/team"
+            variant="light"
+            href="https://edgeryders.eu/c/culture-squad"
             size="lg"
             type="link">
-            Our story
+            Join the forum
           </b-button>
         </div>
       </div>

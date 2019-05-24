@@ -1,5 +1,7 @@
 <template>
-  <div class="container p-4">
+  <div 
+    class="container p-4"
+  >
     <div class="row">
       <div class="col-12">
         <h5 class="mb-5">{{ sectionTitle }}</h5>

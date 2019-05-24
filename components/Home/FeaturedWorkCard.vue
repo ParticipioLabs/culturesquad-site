@@ -15,7 +15,7 @@
     </div>
     <div class="col-lg-6 col-sm-12">
       <h5 class="mb-4">{{ work.title }}</h5>
-      <p v-html="removeSquareBracketsTag(work.excerpt)"/>
+      <div v-html="removeSquareBracketsTag(work.excerpt)"/>
       <a :href="`${edgerydersUrl}/t/${work.slug}/${work.id}`"><small>Read more and join us...</small></a>
     </div>
   </div>

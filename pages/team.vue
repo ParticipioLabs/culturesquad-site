@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hero>
+    <hero id="about">
       <h2>{{ pageHeaderTitle }}</h2>
     </hero>
 
@@ -12,7 +12,7 @@
     </white-section>
 
     <!--Team bios and pictures section-->
-    <grey-section>
+    <grey-section id="profiles">
       <team-bios-pictures :members="members"/>
     </grey-section>
 
@@ -47,8 +47,8 @@
       BurningNowContent
     },
     head: {
-      title: 'Team',
-      titleTemplate: '%s | Culture Squad'
+      title: 'Culture Squad by Edgeryders',
+      titleTemplate: '%s | Our story'
     },
     data() {
       return {
@@ -66,7 +66,19 @@
         // Teams bios and pictures from edgeryders.eu
         const teamBiosPicturesSectionDiscourseEndpoint = 'https://edgeryders.eu/tags/webcontent-culturesquad-member';
         const teamBiosPicturesSection = await context.$axios.get(`${process.env.cacheMiddlewareBaseEndpoint}/get-data?endpoint=${teamBiosPicturesSectionDiscourseEndpoint}`);
-        const members = teamBiosPicturesSection.data.topic_list.topics;
+        const memberThreads = teamBiosPicturesSection.data.topic_list.topics;
+        
+        let members = [];
+        let memberPromises = [];
+        const teamBioThreadBase = 'https://edgeryders.eu/t/';
+        memberThreads.forEach(function (thread) {
+          let memberPromise = context.$axios.get(`${process.env.cacheMiddlewareBaseEndpoint}/get-data?endpoint=${teamBioThreadBase + thread.id}`);
+          memberPromises.push(memberPromise)
+        });
+        const memberPosts = await Promise.all(memberPromises);
+        memberPosts.forEach(function (p) {
+          members.push(p.data)
+        });
 
         // Logos of Edgeryders and partners
         const logosPartnersSectionDiscourseEndpoint = 'https://edgeryders.eu/t/team-site-partners/9604';

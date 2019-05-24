@@ -18,6 +18,11 @@ export const removeSquareBracketsTag = (text) => {
   return text.replace(/ *\[[^\]]*]/g, '');
 };
 
+// Remove HTML tags
+export const removeHTMLTags = (text) => {
+  return text.replace(/<(?:.|\n)*?>/gm, '');
+};
+
 
 // Truncate long text to desired number of chars and end it with desired ellipsis
 export const truncate = (text, length, suffix) => {
@@ -113,10 +118,9 @@ export const extractStartEndDate = (timeString) => {
 // Then we will take time part before whitespace and 'UTC' and format final string
 // The first one is start time and second one is end time
 export const extractParseTimeFromEventContentHtml = (eventContentHTML) => {
-  let matched = eventContentHTML.match(/(?<=\bdata-email-preview=")[^"]*/g);
-  matched = matched.map(m => m.match(/^\S*/g)[0]);
-
-  return moment(matched[0]).format('lll') + ' → ' + moment(matched[1]).format('lll');
+  let matched = eventContentHTML.match(/data-email-preview=\"([^\\"]*)/g);
+  matched = matched.map(m => m.split("\"")[1]);
+  return moment(matched[0].split(" ")[0]).format('lll') + ' → ' + moment(matched[1].split(" ")[0]).format('lll');
 };
 
 

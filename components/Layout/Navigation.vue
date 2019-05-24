@@ -7,9 +7,15 @@
     <div
       :class="{'navigation__hero-container': !isSticky}"
       class="container-fluid">
+
       <b-navbar-brand
         class="navigation__logo"
         to="/">
+        <img 
+          class="erlogo"
+          src="~/assets/er200.png" 
+          alt="Responsive image"
+        >
         {{ websiteName }}
       </b-navbar-brand>
 
@@ -32,7 +38,18 @@
 
         <b-nav-item to="/">Home</b-nav-item>
         <b-nav-item to="/burning-now">Burning now</b-nav-item>
-        <b-nav-item to="/team">Team</b-nav-item>
+        <b-nav-item
+          to="/team" 
+          @click="scrollToDiv('about')" 
+        >
+          Our story
+        </b-nav-item>
+        <b-nav-item 
+          to="/team#profiles" 
+          @click="scrollToDiv('profiles')" 
+        >
+          Team
+        </b-nav-item>
 
         <b-button
           href="https://edgeryders.eu/c/culture-squad"
@@ -99,12 +116,20 @@ export default {
         this.stickyOverride = true;
         this.latestSwitch = 'toSticky';
       }
+    },
+    scrollToDiv(id) {
+      var element = document.getElementById(id);
+      if (element) {
+        var top = element.offsetTop;
+        window.scrollTo(0, top-30);
+      }
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
   .navigation {
     background-color: $white;
     border-bottom: solid 1px rgba(144, 144, 144, 0.2);
@@ -125,12 +150,17 @@ export default {
       animation-timing-function: ease-out;
     }
 
+    .erlogo {
+      height: 40px;
+      margin-right: 10px;
+    }
+
     &__logo {
       // height: 100%;
       // max-height: 40px;
       // width: auto;
       color: #707070;
-      font-size: 1.1rem;
+      font-size: 1.4rem;
 
       &:hover {
         color: #707070;

@@ -7,6 +7,12 @@
       <home-hero-content />
     </hero>
 
+    <!--Team homepage section-->
+    <white-section>
+      <home-team-section
+        :description-html="teamSectionParagraphDescription"/>
+    </white-section>
+
     <!--First homepage section-->
     <grey-section>
       <home-first-section
@@ -15,28 +21,21 @@
     <!-- google-map / -->
     </grey-section>
 
-    <!--Team homepage section-->
-    <white-section>
-      <home-team-section
-        :title="teamSectionTitle"
-        :description-html="teamSectionParagraphDescription"/>
-    </white-section>
-
     <!--Meetup dates homepage section-->
     <grey-section>
       <home-events-section :events="events"/>
-    </grey-section>
-
-    <!--Featured work homepage section-->
-    <grey-section>
-      <home-featured-work-section
-        :featured-work="featuredWork" />
     </grey-section>
 
     <!--Featured content homepage section-->
     <white-section>
       <home-featured-content-section :featured-content="featuredContent"/>
     </white-section>
+
+    <!--Featured work homepage section-->
+    <grey-section>
+      <home-featured-work-section
+        :featured-work="featuredWork" />
+    </grey-section>
 
     <!--Join us homepage section-->
     <grey-section>
@@ -79,8 +78,8 @@ export default {
     HomeJoinUsSection
   },
   head: {
-    title: 'Home',
-    titleTemplate: '%s | Culture Squad'
+    title: 'Culture Squad by Edgeryders',
+    titleTemplate: '%s | Home'
   },
   async asyncData(context) {
     try {
@@ -100,7 +99,7 @@ export default {
       const meetupDatesSectionDiscourseEndpoint = 'https://edgeryders.eu/tags/webcontent-culturesquad-event';
       const meetupDatesSection = await context.$axios.get(`${process.env.cacheMiddlewareBaseEndpoint}/get-data?endpoint=${meetupDatesSectionDiscourseEndpoint}`);
       let events = parseEvents(meetupDatesSection.data.topic_list.topics, 'excerpt');
-      events = sortByDate(events, 'eventStartDate', 'desc');
+      events = sortByDate(events, 'eventStartDate', 'asc');
 
       // Featured work
       const featuredWorkSectionDiscourseEndpoint = 'https://edgeryders.eu/tags/webcontent-culturesquad-featured';

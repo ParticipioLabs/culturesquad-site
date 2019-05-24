@@ -17,7 +17,7 @@
     </a>
     <p class="m-0"><small><strong>Time:</strong> {{ event.time }}</small></p>
     <p class="m-0"><small v-html="event.location"/></p>
-    <p class="mt-5"> {{ truncate(event.content, 100, '...') }}</p>
+    <p class="mt-5"> {{ truncate(event.content, 200, '...') }}</p>
     <a :href="`/event/${event.slug}/${event.id}`"><small>Read more...</small></a>
   </section>
 </template>

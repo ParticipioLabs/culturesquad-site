@@ -5,14 +5,14 @@
       <small>{{ formatDate(post.created_at, 'lll') }}</small>
     </div>
 
-    <p
+    <div
       class="mb-1 mt-3 mt-md-0"
-      v-html="truncate(post.excerpt, 300, '...')"/>
+      v-html="truncate(removeSquareBracketsTag(removeHTMLTags(post.excerpt, 300, '...')))"/>
   </b-list-group-item>
 </template>
 
 <script>
-  import {truncate, formatDate} from '../../modules/utils'
+  import {truncate, formatDate, removeSquareBracketsTag, removeHTMLTags} from '../../modules/utils'
 
   export default {
     props: {
@@ -25,6 +25,8 @@
     },
     data () {
       return {
+        removeSquareBracketsTag,
+        removeHTMLTags,
         edgerydersUrl: process.env.edgerydersUrl,
         truncate,
         formatDate

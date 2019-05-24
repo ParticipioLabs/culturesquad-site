@@ -26,8 +26,8 @@ export default {
     BurningNowContent
   },
   head: {
-      title: 'Burning now',
-      titleTemplate: '%s | Culture Squad'
+    title: 'Culture Squad by Edgeryders',
+    titleTemplate: '%s | Burning now'
   },
   data() {
     return {
