@@ -59,7 +59,7 @@ import HomeEventsSection from '../components/Home/HomeEventsSection';
 import HomeFeaturedWorkSection from "../components/Home/HomeFeaturedWorkSection";
 import HomeFeaturedContentSection from "../components/Home/HomeFeaturedContentSection";
 import HomeJoinUsSection from "../components/Home/HomeJoinUsSection";
-import {parseEvents, parseError, sortByDate} from '../modules/utils';
+import {parseEvents, parseError, sortByDate, fullImageWidthHtml} from '../modules/utils';
 
 export default {
   layout: 'home',
@@ -87,13 +87,13 @@ export default {
       const homepageFirstSectionDiscourseEndpoint = 'https://edgeryders.eu/t/edgeryders-culture-squad/9591';
       const firstSection = await context.$axios.get(`${process.env.cacheMiddlewareBaseEndpoint}/get-data?endpoint=${homepageFirstSectionDiscourseEndpoint}`);
       const firstSectionTitle = firstSection.data.title;
-      const firstSectionParagraphDescription = firstSection.data.post_stream.posts[0].cooked;
+      const firstSectionParagraphDescription = fullImageWidthHtml(firstSection.data.post_stream.posts[0].cooked);
 
       // Team 1 paragraph description + photos
       const homepageTeamSectionDiscourseEndpoint = 'https://edgeryders.eu/t/about-us/9592/2';
       const teamSection = await context.$axios.get(`${process.env.cacheMiddlewareBaseEndpoint}/get-data?endpoint=${homepageTeamSectionDiscourseEndpoint}`);
       const teamSectionTitle = teamSection.data.title;
-      const teamSectionParagraphDescription = teamSection.data.post_stream.posts[0].cooked;
+      const teamSectionParagraphDescription = fullImageWidthHtml(teamSection.data.post_stream.posts[0].cooked);
 
       // Meetup dates
       const meetupDatesSectionDiscourseEndpoint = 'https://edgeryders.eu/tags/webcontent-culturesquad-event';

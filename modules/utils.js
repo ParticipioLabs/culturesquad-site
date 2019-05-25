@@ -23,6 +23,10 @@ export const removeHTMLTags = (text) => {
   return text.replace(/<(?:.|\n)*?>/gm, '');
 };
 
+// Set full image width
+export const fullImageWidthHtml = (text) => {
+  return text.replace(/(width="[^"]*)/gm, 'width="100%').replace(/(height="[^"]*)/gm, 'width="auto');
+};
 
 // Truncate long text to desired number of chars and end it with desired ellipsis
 export const truncate = (text, length, suffix) => {
