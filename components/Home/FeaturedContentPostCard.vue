@@ -7,7 +7,7 @@
 
     <div
       class="mb-1 mt-3 mt-md-0"
-      v-html="truncate(removeSquareBracketsTag(removeHTMLTags(post.excerpt, 300, '...')))"/>
+      v-html="truncate(removeSquareBracketsTag(removeHTMLTags(post.excerpt)), 400, '...')"/>
   </b-list-group-item>
 </template>
 
