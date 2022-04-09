@@ -21,7 +21,7 @@
     "bootstrap-vue": "^2.0.0-rc.15",
     "cross-env": "^5.2.0",
     "geolib": "^2.0.24",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "nuxt": "^2.5.1",
     "vue-clickout": "^1.0.0",
     "vue2-google-maps": "^0.10.6",
